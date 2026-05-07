@@ -20,12 +20,6 @@ public class DesktopService implements DeviceCRUDService<DesktopRequestDTO, Desk
     @Autowired
     private DesktopMapper desktopMapper;
 
-    /**
-     * Get necessary desktop in db by String id.
-     *
-     * @param id
-     * @return Desktop
-     */
     public DesktopResponseDTO getDevice(String id) {
         if (id == null || id.isEmpty()) {
             return null;
