@@ -1,0 +1,523 @@
+{
+	"info": {
+		"_postman_id": "3f95174e-c738-47ce-a0af-6ffd076a3249",
+		"name": "ComputerHardwareStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24149406"
+	},
+	"item": [
+		{
+			"name": "Desktop",
+			"item": [
+				{
+					"name": "GetDesktopById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/desktop/getDesktop?id=8a68b568-826c-4217-aac0-61afd86fc2ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"desktop",
+								"getDesktop"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8a68b568-826c-4217-aac0-61afd86fc2ee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllDesktops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/desktop/getAllDesktops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"desktop",
+								"getAllDesktops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateDesktop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNumber\": 111,\r\n    \"manufacturer\": \"Polar\",\r\n    \"price\": 35000,\r\n    \"stockQuantity\": 5,\r\n    \"formFactor\": \"DESKTOP_TYPE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/desktop/createDesktop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"desktop",
+								"createDesktop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDesktop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNumber\": 85489,\r\n    \"manufacturer\": \"Polar\",\r\n    \"price\": 35000,\r\n    \"stockQuantity\": 5,\r\n    \"formFactor\": \"DESKTOP_TYPE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/desktop/updateDesktop?id=e2384be8-4225-498f-ad71-667a08d88be8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"desktop",
+								"updateDesktop"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "e2384be8-4225-498f-ad71-667a08d88be8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Laptop",
+			"item": [
+				{
+					"name": "GetLaptopById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/laptop/getLaptop?id=cf05f410-d895-4c6e-8b83-c75f5027c0b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"laptop",
+								"getLaptop"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "cf05f410-d895-4c6e-8b83-c75f5027c0b6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllLaptops",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNumber\": 111,\r\n    \"manufacturer\": \"Polar\",\r\n    \"price\": 35000,\r\n    \"stockQuantity\": 5,\r\n    \"formFactor\": \"DESKTOP_TYPE\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/laptop/getAllLaptops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"laptop",
+								"getAllLaptops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLaptop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer\": \"Honor\",\r\n    \"price\": 150000.00,\r\n    \"serialNumber\": 342344,\r\n    \"size\": \"INCH_15\",\r\n    \"stockQuantity\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/laptop/updateLaptop?id=50fa5cbc-fadf-4cca-989d-5d3993134abb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"laptop",
+								"updateLaptop"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "50fa5cbc-fadf-4cca-989d-5d3993134abb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateLaptop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer\": \"Honor\",\r\n    \"price\": 150000.00,\r\n    \"serialNumber\": 342344,\r\n    \"stockQuantity\": 8,\r\n    \"size\": \"INCH_15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/laptop/createLaptop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"laptop",
+								"createLaptop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Screen",
+			"item": [
+				{
+					"name": "GetScreenById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer\": \"Honor\",\r\n    \"price\": 150000.00,\r\n    \"serialNumber\": 342344,\r\n    \"stockQuantity\": 8,\r\n    \"size\": \"INCH_15\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/screen/getScreen?id=8b6247fd-7aa5-4f7b-8f71-f4537840c211",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"screen",
+								"getScreen"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8b6247fd-7aa5-4f7b-8f71-f4537840c211"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllScreen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/screen/getAllScreen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"screen",
+								"getAllScreen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateScreen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagonal\": 28.0,\r\n    \"manufacturer\": \"Xiaomi\",\r\n    \"price\": 18000.00,\r\n    \"serialNumber\": 9874648643,\r\n    \"stockQuantity\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/screen/createScreen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"screen",
+								"createScreen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateScreen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagonal\": 19.0,\r\n    \"manufacturer\": \"Xiaomi\",\r\n    \"price\": 18000.00,\r\n    \"serialNumber\": 9874648643,\r\n    \"stockQuantity\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/screen/updateScreen?id=b89106ae-28f7-4b5f-ac0b-2b2a49dbaf5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"screen",
+								"updateScreen"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "b89106ae-28f7-4b5f-ac0b-2b2a49dbaf5f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HardDrive",
+			"item": [
+				{
+					"name": "GetHardDrive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hardDrive/getHardDrive?id=f71534c3-e231-40fe-861a-9d208b128e0a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hardDrive",
+								"getHardDrive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f71534c3-e231-40fe-861a-9d208b128e0a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllHardDrives",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagonal\": 28.0,\r\n    \"manufacturer\": \"Xiaomi\",\r\n    \"price\": 18000.00,\r\n    \"serialNumber\": 9874648643,\r\n    \"stockQuantity\": 11\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hardDrive/getAllHardDrives",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hardDrive",
+								"getAllHardDrives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateHardDrive",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer\": \"GIGABYTE\",\r\n    \"price\": 14990.00,\r\n    \"serialNumber\": 7845478,\r\n    \"stockQuantity\": 10,\r\n    \"volume\": 1024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hardDrive/createHardDrive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hardDrive",
+								"createHardDrive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHardDrive",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturer\": \"GIGABYTE\",\r\n    \"price\": 9090.50,\r\n    \"serialNumber\": 7845478,\r\n    \"stockQuantity\": 10,\r\n    \"volume\": 1024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/hardDrive/updateHardDrive?id=b93f96d6-2224-4ea2-9d06-e1297fb2df43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hardDrive",
+								"updateHardDrive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "b93f96d6-2224-4ea2-9d06-e1297fb2df43"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
