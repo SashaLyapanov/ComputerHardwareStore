@@ -19,6 +19,28 @@ services:
         aliases:
           - db
 
+  computer-hardware-store:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sashalyapanov/computer-hardware-store:latest
+    container_name: computer-hardware-store
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/TZLyapanovDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_PROFILES_ACTIVE: docker
+      PROJECT_PATH: /app
+    depends_on:
+      - db
+    networks:
+      tz-network:
+        aliases:
+          - computer-hardware-store
+
 volumes:
   db-data:
     driver: local
