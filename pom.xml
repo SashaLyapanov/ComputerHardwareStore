@@ -98,6 +98,12 @@
             <artifactId>spring-boot-starter-liquibase-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>3.0.3</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -120,7 +126,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.example.kursachrps.KursachRpsApplication</mainClass>
+                    <mainClass>h2o.tz.lyapanov.tz_lyapanov_aa.TzLyapanovAaApplication</mainClass>
                     <additionalProperties>
                         <encoding.source>UTF-8</encoding.source>
                         <encoding.reporting>UTF-8</encoding.reporting>
