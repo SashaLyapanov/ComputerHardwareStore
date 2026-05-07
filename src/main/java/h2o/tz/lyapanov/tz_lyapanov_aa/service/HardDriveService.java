@@ -6,17 +6,17 @@ import h2o.tz.lyapanov.tz_lyapanov_aa.exceptions.DeviceNotFoundException;
 import h2o.tz.lyapanov.tz_lyapanov_aa.mapper.HardDriveMapper;
 import h2o.tz.lyapanov.tz_lyapanov_aa.model.HardDrive;
 import h2o.tz.lyapanov.tz_lyapanov_aa.repository.HardDriveRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class HardDriveService implements DeviceCRUDService<HardDriveRequestDTO, HardDriveResponseDTO> {
-    @Autowired
-    private HardDriveRepository hardDriveRepository;
-    @Autowired
-    private HardDriveMapper hardDriveMapper;
+
+    private final HardDriveRepository hardDriveRepository;
+    private final HardDriveMapper hardDriveMapper;
 
 
     @Override

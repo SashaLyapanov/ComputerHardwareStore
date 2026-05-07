@@ -7,18 +7,17 @@ import h2o.tz.lyapanov.tz_lyapanov_aa.mapper.DesktopMapper;
 import h2o.tz.lyapanov.tz_lyapanov_aa.model.Desktop;
 import h2o.tz.lyapanov.tz_lyapanov_aa.repository.DesktopRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class DesktopService implements DeviceCRUDService<DesktopRequestDTO, DesktopResponseDTO> {
 
-    @Autowired
-    private DesktopRepository desktopRepository;
-    @Autowired
-    private DesktopMapper desktopMapper;
+    private final DesktopRepository desktopRepository;
+    private final DesktopMapper desktopMapper;
 
     public DesktopResponseDTO getDevice(String id) {
         if (id == null || id.isEmpty()) {

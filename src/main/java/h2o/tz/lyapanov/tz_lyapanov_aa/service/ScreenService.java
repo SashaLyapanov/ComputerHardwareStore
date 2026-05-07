@@ -6,18 +6,17 @@ import h2o.tz.lyapanov.tz_lyapanov_aa.exceptions.DeviceNotFoundException;
 import h2o.tz.lyapanov.tz_lyapanov_aa.mapper.ScreenMapper;
 import h2o.tz.lyapanov.tz_lyapanov_aa.model.Screen;
 import h2o.tz.lyapanov.tz_lyapanov_aa.repository.ScreenRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class ScreenService implements DeviceCRUDService<ScreenRequestDTO, ScreenResponseDTO> {
 
-    @Autowired
-    ScreenRepository screenRepository;
-    @Autowired
-    ScreenMapper screenMapper;
+    private final ScreenRepository screenRepository;
+    private final ScreenMapper screenMapper;
 
     @Override
     public ScreenResponseDTO getDevice(String id) {

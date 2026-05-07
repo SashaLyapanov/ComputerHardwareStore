@@ -6,18 +6,17 @@ import h2o.tz.lyapanov.tz_lyapanov_aa.exceptions.DeviceNotFoundException;
 import h2o.tz.lyapanov.tz_lyapanov_aa.mapper.LaptopMapper;
 import h2o.tz.lyapanov.tz_lyapanov_aa.model.Laptop;
 import h2o.tz.lyapanov.tz_lyapanov_aa.repository.LaptopRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class LaptopService implements DeviceCRUDService<LaptopRequestDTO, LaptopResponseDTO> {
 
-    @Autowired
-    private LaptopRepository laptopRepository;
-    @Autowired
-    private LaptopMapper laptopMapper;
+    private final LaptopRepository laptopRepository;
+    private final LaptopMapper laptopMapper;
 
     @Override
     public LaptopResponseDTO getDevice(String id) {
